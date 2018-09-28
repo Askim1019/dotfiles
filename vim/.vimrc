@@ -57,6 +57,9 @@ set shiftwidth=2
 set expandtab
 set list listchars=tab:>-,trail:·
 
+" Get backspace to work
+set backspace=indent,eol,start
+
 " Searching
 set hlsearch
 set incsearch
