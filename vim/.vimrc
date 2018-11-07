@@ -28,7 +28,8 @@ Plugin 'neovimhaskell/haskell-vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'ElmCast/elm-vim'
 Plugin 'alx741/vim-hindent'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -92,7 +93,7 @@ color slate
 
 " Color the line number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-
+set nospell
 "##" Change cursor style when entering INSERT mode (works in tmux!)
 "##" This is cute, but might not work properly on OSX :-(, getting
 "##" weird errors when system editor is invoked
