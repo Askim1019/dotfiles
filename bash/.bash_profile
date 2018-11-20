@@ -22,6 +22,7 @@ alias cx="chmod +x $1"
 alias pathline="echo $PATH | tr ':' '\n'"
 alias e='vim'
 alias be='bundle exec'
+alias google-chrome="open -a 'Google Chrome'"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 

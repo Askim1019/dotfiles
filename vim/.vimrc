@@ -43,6 +43,9 @@ set laststatus=2
 set relativenumber
 set number
 
+" allow for mouse selection
+set mouse=r
+
 set ruler
 set hidden
 set history=200
