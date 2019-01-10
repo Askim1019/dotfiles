@@ -4,7 +4,15 @@ if [ -f /etc/profile ]; then
     source /etc/profile
 fi
 
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+# export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\$(__git_ps1)$ "
+# PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)$ '
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+
+}
+
+# export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\[\033[1;34m\]\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
@@ -13,6 +21,7 @@ source ~/bash-repos/pure-bash-bible/bashbible.sh
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 source ~/git-completion.bash
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 
 #Add Visual Studio Code (code)
 export PATH="$PATH:$HOME/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -34,4 +43,3 @@ alias google-chrome="open -a 'Google Chrome'"
 # MacPorts Installer addition on 2018-10-12_at_10:51:33: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
-
