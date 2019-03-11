@@ -121,6 +121,14 @@ highlight Search ctermfg=Black ctermbg=Yellow cterm=NONE
 " <C-l> to clear search result - no need for :noh
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>​
 
+" Share vim clipboard and mac system keyboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+" Yanks go on clipboard instead"
+set clipboard+=unnamed
+
 " Edit a file in the directory of the file currently being edited
 nmap ,e :e <C-R>=expand("%:p:h") . "/"<CR>
 nmap ,, <C-^>
