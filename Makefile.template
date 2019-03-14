@@ -1,0 +1,9 @@
+db-setup: ## Setup db
+	dropdb "name of db"
+	PGDATABASE="name of db" createdb
+
+# Any command that has ## will show the command and the double ## comment when 'make' is entered
+help: ## Display this message
+	@echo "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\1:\2/' | column -c2 -t -s :)"
+.PHONY: help
+.DEFAULT_GOAL := help
