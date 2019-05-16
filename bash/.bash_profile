@@ -8,13 +8,14 @@ fi
 # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)$ '
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-
 }
 
 # export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 export PS1="\[\033[1;34m\]\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+export MSDATABASE=copperdb
+export MSPASSWORD=ffakim
 
 source ~/bash-repos/pure-bash-bible/bashbible.sh
 # source ~/bash-repos/bash-oo-framework/bashinfinity.sh
@@ -32,14 +33,8 @@ alias pathline="echo $PATH | tr ':' '\n'"
 alias e='vim'
 alias be='bundle exec'
 alias google-chrome="open -a 'Google Chrome'"
+alias countfiles="ls -l | wc -l"
+alias countlines="sed -n '$='"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-
-
-##
-# Your previous /Users/akim/.bash_profile file was backed up as /Users/akim/.bash_profile.macports-saved_2018-10-12_at_10:51:33
-##
-
-# MacPorts Installer addition on 2018-10-12_at_10:51:33: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+export PATH=$HOME/.local/bin:$PATH
