@@ -11,7 +11,7 @@ parse_git_branch() {
 }
 
 # export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-export PS1="\[\033[1;34m\]\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\[\033[1;34m\]\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ 🏀 "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export MSDATABASE=copperdb
