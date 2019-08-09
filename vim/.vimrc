@@ -186,3 +186,6 @@ if !exists("autocmmands_loaded")
   au Filetype go source ~/.vim/scripts/go.vim
 endif
 
+" Copy from vim to clipboard mapping
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>

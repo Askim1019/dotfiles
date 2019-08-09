@@ -14,14 +14,7 @@ parse_git_branch() {
 export PS1="\[\033[1;34m\]\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ 🏀 "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-export MSDATABASE=copperdb
-export MSPASSWORD=ffakim
 
-source ~/bash-repos/pure-bash-bible/bashbible.sh
-# source ~/bash-repos/bash-oo-framework/bashinfinity.sh
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-source ~/git-completion.bash
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 
 #Add Visual Studio Code (code)
