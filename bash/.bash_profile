@@ -29,5 +29,9 @@ alias google-chrome="open -a 'Google Chrome'"
 alias countfiles="ls -l | wc -l"
 alias countlines="sed -n '$='"
 
+if [ -f ~/.git-completion.bash  ]; then
+  . ~/.git-completion.bash
+fi
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH=$HOME/.local/bin:$PATH

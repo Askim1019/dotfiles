@@ -182,7 +182,6 @@ if !exists("autocmmands_loaded")
   " au Filetype elixir source ~/.vim/scripts/elixir.vim - don't need it just
   " yet
   au Filetype ruby source ~/.vim/scripts/ruby.vim
-  au Filetype haskell source ~/.vim/scripts/haskell.vim
   au Filetype go source ~/.vim/scripts/go.vim
 endif
 
