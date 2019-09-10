@@ -28,6 +28,7 @@ alias be='bundle exec'
 alias google-chrome="open -a 'Google Chrome'"
 alias countfiles="ls -l | wc -l"
 alias countlines="sed -n '$='"
+alias json-output="pbpaste | jq | less -r" # jq must be installed
 
 if [ -f ~/.git-completion.bash  ]; then
   . ~/.git-completion.bash
