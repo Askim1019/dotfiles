@@ -3,7 +3,7 @@ if [ -f /etc/profile ]; then
     PATH=""
     source /etc/profile
 fi
-
+__GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
 # export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\$(__git_ps1)$ "
 # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)$ '
 parse_git_branch() {
@@ -34,5 +34,5 @@ if [ -f ~/.git-completion.bash  ]; then
   . ~/.git-completion.bash
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH=$HOME/.local/bin:$PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
