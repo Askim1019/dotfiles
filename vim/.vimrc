@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -188,3 +188,5 @@ endif
 " Copy from vim to clipboard mapping
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
+
+set nornu
